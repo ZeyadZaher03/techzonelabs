@@ -1,0 +1,574 @@
+// BASIC STYLES
+*,
+*:before,
+*:after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html 
+    font-size: 62.5%
+
+body
+    font-family: cairo
+    line-height: 1.2
+
+// VARIABLES
+
+//COLORS MAIN
+$main-color:  #770cbf
+$main-color-light-1: #8524c5
+$main-color-light-2: #923dcc
+$main-color-light-3: #ad6dd9
+
+$main-color-dark-1: #6b0bac
+$main-color-dark-2: #5f0a99
+$main-color-dark-3: #530886
+
+// secondary color
+$sec-color: #e8bc0c
+$sec-color-dark-1: #d1a90b
+$sec-color-dark-2: #ba960a
+$sec-color-dark-3: #a28408
+$sec-color-light-1: #eac324
+$sec-color-light-2: #edc93d
+$sec-color-light-3: #efd055
+
+//COLORS SOCIAL MEDIA
+$android-color : #a4c639
+$apple-color : #a6b1b7
+$facebook-color : #1877f2
+$twitter-color : #1da1f2
+$instagram-color : radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)
+$linkedin-color :  #007bb5
+// 
+$black : #000000
+$white : #ffffff
+$offwhite : #000
+$grey-1 : #000
+$grey-2 : #000
+$grey-3 : #000
+$dark-grey-1 : #000
+$dark-grey-2 : #000
+$dark-grey-3 : #000
+
+.font-white
+    color: #fff !important
+//SIZES FONTS
+$font-xs: .8rem
+$font-s: 1.2rem
+$font-m: 1.6rem
+$font-l: 2rem
+$font-xl: 4rem
+$font-xxl: 5.5rem
+$font-xxxl: 7rem
+//SIZES SPACING
+$xs: .8rem
+$s: 1rem
+$m : 2rem
+$l : 3.5rem
+$xl : 5rem
+$xxl : 10rem
+$xxxl : 20rem
+
+$windowSize: 20rem
+
+// MIXIN CENTERING
+@mixin centerFlex()
+    display: flex
+    justify-content: center
+    align-items: center
+
+section
+    padding: 8rem 10rem 10rem 10rem
+
+.section-header
+    font-family: Titillium Web
+    font-size: $font-xxl
+    text-transform: uppercase
+    text-align: center
+    color: $main-color-dark-2
+    width: 80rem
+    margin: 0 auto
+    margin-bottom: 7rem
+    transition: all 150ms ease-in-out
+    &:hover
+        transform: rotate(-2deg) skew(-15deg) scale(1.2)
+
+.button
+    text-decoration: none
+    cursor: pointer
+    font-size: $font-m
+    padding: 1rem 1.5rem
+    font-weight: bold
+    letter-spacing: 1px
+    border-radius: .3rem
+    color: #fff
+    background: $main-color
+    text-transform: uppercase
+    display: inline-block
+    transition: all 200ms ease-in-out
+    
+    &-hero
+        z-index: 9999
+        margin: 1rem 0
+        font-size: 1.8rem
+        padding: 1.1rem 2.3rem 
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+        &:hover
+            // background: $main-color-light-1 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)
+            backface-visibility: none
+            transform: scale(1.05)
+
+.hero-heading
+    font-size: $font-xxxl
+    font-family: Titillium Web
+    padding: 0 $xl
+    padding-bottom: 1.2rem
+    transition: all .2s ease-in-out
+    text-shadow: 0px 0px 50px rgba(0, 0, 0, .2)
+    &:hover
+        transform: rotate(-2deg) skew(-15deg) scale(1.1) translateY(.6rem)
+        text-shadow: 0px 0px 50px rgba(0, 0, 0, .8)
+        padding-bottom: 2rem
+
+// NAV
+.top-navigation
+    display: flex
+    justify-content: space-between
+    z-index: 9
+    align-items: center
+    height: 7rem
+    width: 100%
+    padding: 0 $xxl
+    position: absolute
+    top: 0
+    left: 0
+    background-color: $white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15)
+
+    .logo img
+        width: 18rem
+
+    .top-navigation_container 
+        list-style: none
+        display: flex
+        
+        .top-navogation_item:not(:last-child)
+            margin-right: 5rem
+        
+        .top-navigation_link,
+        .top-navigation_link:link,
+        .top-navigation_link:active,
+        .top-navigation_link:hover,
+            text-decoration: none
+            color: $main-color
+            font-weight: 600 
+            font-size: $font-l
+// END NAV
+
+// HEADER 
+.header-section
+    color: $white
+    height: 100vh
+    text-align: center
+    background-position: center
+    background-image: linear-gradient(-45deg,#00000080,#00000080),url("../images/hero02.jpg")
+    background-size: cover
+    background-attachment: fixed
+    @include centerFlex
+
+    .heading-par
+        font-size: $font-l
+        padding-bottom: 1rem
+// END HEADER
+    
+// SERVICES
+.services-container
+    @include centerFlex()
+
+    &:not(:last-child)
+        margin-bottom: 5rem
+    
+    .service-item
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        &:not(:last-child)
+            margin-right: 8rem
+
+        &-icon svg 
+            width: 10rem
+            margin: 2rem
+        
+        &-heading 
+            font-size: 2.5rem
+            text-transform: uppercase
+            text-align: center
+            font-family: Titillium Web
+        
+        #apple
+            fill: #000
+        #android
+            fill: darken($android-color,5 )
+        #web
+            fill: #e00c5d
+        #e-com
+            fill : #2ebfa7
+        #erp
+            fill: #3550e6
+// SERVICES END
+        
+.odd-section
+    background: #f6f6f6
+
+.section-feature
+    
+    .feature-container
+        display: flex
+        & > div:not(:last-child)
+            margin-right: 5rem
+    
+    #innovation
+        width: 100%
+    
+    .feature
+        &-text
+            flex: 1
+            display: flex
+            justify-content: center
+            flex-direction: column
+            &_header
+                font-size: $font-xxl
+                font-family: Titillium Web
+            &_par
+                margin: 2rem 0 
+                font-size: 1.8rem
+            ul 
+                padding-left: 2.5rem
+                
+        &-image
+            flex: 1
+            display: flex
+            align-items: center
+            justify-content: center
+            & img
+                width: 90%
+
+.section-testimoials
+    background: $main-color-light-1
+    .testimonial
+        &_item
+            padding: 2rem 3rem
+            background: #ffffff
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .5)
+            display: flex
+            flex-direction: column
+            border-radius: .3rem
+            justify-content: center
+            align-items: center
+            &:not(:last-child)
+                margin-right: 5rem
+        &_image
+            width: 10rem
+            height: 10rem
+            border-radius: 100% 
+            display: flex
+            justify-content: center
+            align-items: center
+            overflow: hidden
+        &_name
+            font-size: 2.5rem
+            margin-top: 2rem 
+        &_par
+            font-size: 1.8rem
+            margin-top: 1rem 
+            text-align: center
+    .glider-contain
+        width: 100%
+        padding: 0 5rem
+    
+.glider-prev ,.glider-next
+    color :#fff !important
+
+.glider.draggable
+    padding-bottom: 2rem
+
+.contact
+    &_container
+        display: flex
+        & > div
+            flex: 1
+        
+    &_map
+        margin-right: 2rem
+        div
+            width: 100% !important
+            height: 100% !important
+    &_form
+        form 
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+    input
+        width: 100%
+        padding: 2rem 3rem
+        border: 1px solid #ccc
+        margin-bottom: 2rem
+        font-family: cairo
+        @include centerFlex()
+        &::placeholder
+            font-size: $font-l
+        
+    textarea
+        width: 100%
+        font-family: cairo
+        padding: 1rem 3rem
+        border: 1px solid #ccc
+        height: 20rem
+        &::placeholder
+            font-size: $font-l
+
+.ourwork_container
+    display: flex
+        
+    .ourwork
+        padding : 3rem 2rem
+        background: $white
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, .2)
+        flex-direction: column
+        border-radius: .3rem
+        transition: all 200ms ease-in-out
+        @include centerFlex()
+        &:hover
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, .2)
+            transform: scale(1.1)
+        &:not(:last-child)
+            margin-right: 5rem;
+        
+        &_icon
+            background: $main-color-light-1
+            color: #fff
+            display: flex 
+            width: 8rem
+            height: 8rem
+            justify-content: center
+            align-items: center   
+            border-radius: 50%
+            padding: 2rem
+            font-size: 4rem
+            margin-bottom: 2rem
+
+        &_heading
+            font-size: 2.5rem
+            margin-bottom: 1.5rem
+        
+        &_par
+            font-size: 1.6rem
+            text-align: center
+
+.portofolio
+    margin: 0 20rem 10rem 20rem
+    
+    .project-container
+        display: grid
+        width: 100%
+        grid-template-columns: repeat(3,1fr)
+        column-gap: 5rem
+        row-gap: 3rem
+    .project
+        background: #ffffff
+        padding: 2rem 3rem
+        border-radius: .3rem
+        transition: all 200ms ease
+        box-shadow: 0px 0px 5px 0px rgba( 0, 0, 0, 0.1)
+        &:hover
+            box-shadow: 0px 0px 15px 1px rgba( 0, 0, 0, 0.15)
+            transform: scale(1.1) translateY(-.2rem)
+        img
+            width: 100%
+        p
+            text-align: center
+            font-size: 2rem
+            margin-top: 1.5rem
+        span
+            font-size: $font-s
+            display: inline-block
+            margin-top: 1rem
+            text-align: center
+        button
+            text-align: center
+            margin: 0 auto
+            display: block
+            margin-top: 1.2rem
+            padding: .7rem 2rem
+            border : 0
+            border-radius: 5rem
+            color: $white
+            font-weight: 600
+            cursor: pointer
+            background-image: linear-gradient(45deg , $main-color-dark-3 , $main-color-light-3)
+
+.footer-section
+    background: #222222
+    .footer-container
+        padding: 5rem 15rem 5rem 15rem
+        display: grid
+        grid-template-columns: 3fr 2fr 2fr 2fr 2fr
+        font-size: 1.4rem
+        .footer
+            &_col
+                line-height: 1.4
+                color: #fff
+                & > img,h2
+                    margin-bottom: 2rem
+                    
+                h2
+                    font-size: 1.6rem
+                    font-weight: bold
+                    letter-spacing: 1px
+                ul
+                    margin-left: 1.8rem
+                    color: #cfcfcf 
+                    li:not(:last-child)
+                        margin-bottom: 1rem
+                    
+            &_col:not(:last-child)
+                margin-right: 5rem
+            &_logo
+                img 
+                    width: 20rem
+
+
+// teams
+.header-section-ourteam
+.ourteam-header
+    &_container
+        // height: 65vh
+        text-align: center
+        padding: 15rem 0  
+        flex-direction: column
+        clip-path: ellipse(129% 88% at 50% 8%)
+        background: $main-color-light-2
+        @include centerFlex()
+    &_heading
+        font-family: Titillium Web
+        font-weight: 600
+        color: $white
+        font-size: $font-xxxl
+        margin-bottom: 2rem
+    &_par
+        color: #f1f1f1
+        line-height: 1.4
+        font-size: $font-l
+        font-family: cairo
+        width: 70%
+
+    
+.section-team
+    .team-mem_container
+        display: grid
+        justify-items: center
+        align-items: center
+        grid-template-columns: 1fr 1fr 1fr 
+        grid-column-gap: 3rem
+        grid-row-gap: 6rem
+    .team-mem
+        position: relative
+        cursor: pointer
+        width: 22.5rem
+        height: 30rem
+        box-shadow: 0 0 5px rgba(0, 0, 0, .2)
+        backface-visibility: hidden
+        // background: #dddddd
+        border-radius: 3px
+        &_front,&_back
+            border-radius: 3px
+            transition: transform 400ms ease
+            width: 100%
+            height: 100%
+            position: absolute
+            overflow: hidden
+            backface-visibility: hidden
+        &_front
+            transform: perspective(600px) rotateY(0deg)
+            .team-mem_image
+                width: 100%
+                height: 80%;
+                img
+                    width: 100%
+                    z-index: -1
+            .team-mem_front-name
+                z-index: 999
+                height: 20%
+                width: 100%
+                background: #fff
+                display: block
+                position: absolute
+                @include centerFlex()
+                h3
+                    color: $black
+                    font-size: $font-l
+        &_back
+            transform: perspective(600px) rotateY(-180deg)
+            flex-direction: column
+            background-color: $main-color-light-2
+            cursor: default
+            @include centerFlex()
+            .cicle-img
+                width: 10rem
+                height: 10rem
+                border-radius: 50%
+                overflow: hidden
+                border: 2px solid #363636
+                img
+                    width: 100%
+                    @include centerFlex()
+        &_name
+            color: $white
+            font-size: 2.5rem
+            margin: 2rem 0 1rem 0
+        &_tilte
+            color: $white
+            font-size: $font-m
+            // margin: 2rem 0 1rem 0
+        &_social            
+            .sm
+                a
+                    display: inline-block
+                    margin: 2rem 0
+                    text-decoration: none
+                    svg
+                        color: white
+                        font-size: 2rem
+                        transition: all 200ms ease
+                    svg:hover 
+                        font-size: 2.5rem
+    .team-mem:hover > .team-mem_front
+        transform: perspective(600px) rotateY(180deg)
+    .team-mem:hover > .team-mem_back
+        transform: perspective(600px) rotateY(0deg)
+#joinus
+    margin-top: 6rem
+.joinus
+    .contact
+        width: 50%
+        margin: 0 auto
+.joinus-button
+    border: 0
+    margin: 0 auto
+    display: block
+    width: 25%
+    padding: 1.5rem 0
+    border-radius: 5rem
+    background-image: linear-gradient(45deg , $main-color-dark-3 , $main-color-light-3)
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3)
+    transition: all 200ms ease-in-out
+    margin-top: 4rem
+    &:hover
+        transform: translateY(-4px)
+        box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4)
+
