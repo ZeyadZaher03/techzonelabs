@@ -29,24 +29,44 @@
 
 	<body>
 		<nav class="top-navigation">
-			<a href="#" class="logo">
+			<a href="index.html" class="logo">
 				<img src="./assets/images/techzone.png" alt="Techzonelabs" />
 			</a>
 			<ul class="top-navigation_container">
 				<li class="top-navogation_item">
-					<a href="#" class="top-navigation_link">Home</a>
+					<a href="index.html" class="top-navigation_link">Home</a>
 				</li>
 				<li class="top-navogation_item">
-					<a href="#" class="top-navigation_link">Services</a>
+					<a
+						id="dropdown-services-btn"
+						href="#"
+						class="top-navigation_link"
+					>
+						Services
+					</a>
 				</li>
 				<li class="top-navogation_item">
-					<a href="#" class="top-navigation_link">About</a>
+					<a id="dropdown-about-btn" class="top-navigation_link">
+						About
+					</a>
+					<ul id="dropdown-about">
+						<li><a href="ourteam.html">Our team</a></li>
+						<li><a href="ourwork.html">our WORK</a></li>
+						<li><a href="joinus.html">Join us</a></li>
+					</ul>
 				</li>
+
 				<li class="top-navogation_item">
 					<a href="#" class="top-navigation_link">Blog</a>
 				</li>
 			</ul>
-			<a href="#" class="button button-main button-rounded">CONTACT US</a>
+			<a
+				href="#"
+				class="contactus-button button button-main button-rounded"
+			>
+				CONTACT US
+			</a>
+			<button class="menu button button-main button-rounded">**</button>
 		</nav>
 
 		<section id="joinus" class="section-team">

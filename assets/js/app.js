@@ -35,3 +35,17 @@ if (isMobile) {
 		},
 	});
 }
+const aboutBtn = document.querySelector("#dropdown-about-btn");
+const about = document.querySelector("#dropdown-about");
+let isVis = false;
+aboutBtn.addEventListener("click", (e) => {
+	if (isVis) {
+		about.style.display = "none";
+		return (isVis = false);
+	} else {
+		about.style.display = "flex";
+		return (isVis = true);
+	}
+});
+
+// const visHide = (ele) => {};
