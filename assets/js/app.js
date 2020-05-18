@@ -37,15 +37,26 @@ if (isMobile) {
 }
 const aboutBtn = document.querySelector("#dropdown-about-btn");
 const about = document.querySelector("#dropdown-about");
-let isVis = false;
+const menuBtn = document.querySelector(".menu");
+let isAboutVis = false;
 aboutBtn.addEventListener("click", (e) => {
-	if (isVis) {
+	if (isAboutVis) {
 		about.style.display = "none";
-		return (isVis = false);
+		return (isAboutVis = false);
 	} else {
 		about.style.display = "flex";
-		return (isVis = true);
+		return (isAboutVis = true);
 	}
 });
 
-// const visHide = (ele) => {};
+let isMenuVis = false;
+menuBtn.addEventListener("click", (e) => {
+	if (isMenuVis) {
+		menuBtn.classList.add("menu-bar-close");
+		menuBtn.classList.remove("menu-bar-open");
+		return (isMenuVis = false);
+	} else {
+		menuBtn.classList.add("menu-bar-open");
+		return (isMenuVis = true);
+	}
+});
