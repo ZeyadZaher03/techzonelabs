@@ -72,7 +72,14 @@ $xxl : 10rem
 $xxxl : 20rem
 
 $windowSize: 20rem
-
+@mixin shadow-subtle()
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.2)
+@mixin shadow-normal()
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2)
+@mixin shadow-bold()
+    text-shadow: 0px 0px 15px rgba(0,0,0,0.6)
+.menu
+    display: none
 // MIXIN CENTERING
 @mixin centerFlex()
     display: flex
@@ -88,12 +95,10 @@ section
     text-transform: uppercase
     text-align: center
     color: $main-color-dark-2
-    width: 80rem
+    width: 90rem
     margin: 0 auto
     margin-bottom: 7rem
     transition: all 150ms ease-in-out
-    &:hover
-        transform: rotate(-2deg) skew(-15deg) scale(1.2)
 
 .button
     text-decoration: none
@@ -230,6 +235,8 @@ section
         display: flex
         & > div:not(:last-child)
             margin-right: 5rem
+            // animation: bounce
+            // animation-duration: 2s
     
     #innovation
         width: 100%
@@ -415,7 +422,7 @@ section
 .footer-section
     background: #222222
     .footer-container
-        padding: 5rem 15rem 5rem 15rem
+        padding: 8rem 10rem 10rem 10rem
         display: grid
         grid-template-columns: 3fr 2fr 2fr 2fr 2fr
         font-size: 1.4rem
@@ -572,3 +579,77 @@ section
         transform: translateY(-4px)
         box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4)
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
+    html 
+        font-size: 48.5%
+    .ourwork_container
+        flex-direction: column
+    .ourwork_container .ourwork:not(:last-child)
+        margin: 0
+        margin-bottom: 4rem
+    .portofolio
+        margin: 0
+    .section-header
+        width: auto
+    .footer-container
+        grid-template-columns: 1fr 1fr !important
+        grid-row-gap: 2rem 
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 767px)
+    html 
+        font-size: 48.5%
+    .ourwork_container
+        flex-direction: column
+    .ourwork_container .ourwork:not(:last-child)
+        margin: 0
+        margin-bottom: 4rem
+    section
+        padding: 3rem 2rem
+    .services-container
+        flex-direction: column
+    .services-container .service-item:not(:last-child)
+        margin: 0 !important
+        margin-bottom: 3rem !important
+    .feature-text
+        text-align: center
+    
+    .section-feature .feature-container
+        flex-direction: column
+    .feature-text_header
+        font-size: 3.5rem !important
+    .section-feature .feature-text_par
+        font-size: 1.6rem
+        width: 25rem
+        margin: 2rem auto
+    .section-feature .feature-container > div:not(:last-child)
+        margin-bottom: 3rem
+        margin: 0 auto !important
+    #odd-col
+        flex-direction: column-reverse !important
+    .section-feature .feature-image
+        width: 50%
+        margin: 0 auto
+
+    .portofolio
+        margin: 0
+    .section-header
+        width: auto
+    .footer-container
+        grid-template-columns: 1fr 1fr !important
+        grid-row-gap: 2rem 
+    .top-navigation
+        padding: 0 2rem !important
+    .top-navigation_container
+        display: none !important
+    .testimonial_name
+        font-size: 1.2rem
+    .contact_container
+        flex-direction: column-reverse
+    .portofolio .project-container
+        grid-template-columns: 1fr
+    .footer-section .footer-container
+        grid-template-columns: 1fr !important
+    .menu 
+        display: inline-block
+    .contactus-button
+        display: none
