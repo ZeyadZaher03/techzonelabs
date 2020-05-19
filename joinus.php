@@ -1,97 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Titillium+Web:wght@300;400;600&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="./assets/vendor/WOW-master/css/libs/animate.css"
-		/>
-		<link rel="stylesheet" href="./assets/css/style.css" />
-		<script
-			defer
-			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-			integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
-			crossorigin="anonymous"
-		></script>
-		<script
-			defer
-			src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"
-		></script>
-		<!-- AIzaSyDWweLTl5rXcXwyb_DhB2cByhgyspmrT8Q -->
+		<?php include "./includes/head.php"?>
 		<title>Techzonelabs -join us</title>
 	</head>
 
 	<body>
-		<nav class="top-navigation">
-			<a href="index.html" class="logo">
-				<img src="./assets/images/techzone.png" alt="Techzonelabs" />
-			</a>
-			<ul class="top-navigation_container">
-				<li class="top-navogation_item">
-					<a href="index.html" class="top-navigation_link">Home</a>
-				</li>
-				<li class="top-navogation_item">
-					<a
-						id="dropdown-services-btn"
-						href="#"
-						class="top-navigation_link"
-					>
-						Services
-					</a>
-				</li>
-				<li class="top-navogation_item">
-					<a id="dropdown-about-btn" class="top-navigation_link">
-						About
-					</a>
-					<ul id="dropdown-about">
-						<li><a href="ourteam.html">Our team</a></li>
-						<li><a href="ourwork.html">our WORK</a></li>
-						<li><a href="joinus.html">Join us</a></li>
-					</ul>
-				</li>
-
-				<li class="top-navogation_item">
-					<a href="#" class="top-navigation_link">Blog</a>
-				</li>
-			</ul>
-			<a
-				href="#"
-				class="contactus-button button button-main button-rounded"
-			>
-				CONTACT US
-			</a>
-			<button class="menu button button-main button-rounded">
-				<div class="menu-bar"></div>
-			</button>
-		</nav>
+		<?php include "./includes/navigation.php"?>
 
 		<section class="joinus-section">
-			<h2 class="section-header">BE A PART OF Techzonelabs</h2>
-			<div class="joinus-section_content">
-				<div class="joinus-section_par">
-					<h2>hello world jool fool</h2>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Quisquam nulla natus repellat eaque saepe nisi a ab atque
-					error ad quibusdam fuga cum, autem officia quos ea tempore
-					consectetur repudiandae? <br /><br />
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Praesentium libero molestiae ipsam. Sequi accusamus dolorum
-					ab quos incidunt illum iure, ipsa corrupti, dolore assumenda
-					amet aspernatur quae cum unde consequuntur!
-				</div>
-				<div class="joinus-section_img">
-					<img src="./assets/images/innovation_.png" alt="inv" />
-				</div>
-			</div>
+		
 		</section>
 		<section class="joinus-form">
 			<div class="joinus-form_container">

@@ -109,6 +109,7 @@ $windowSize: 20rem
             font-size: 1.6rem
             text-transform: uppercase
             color: $main-color
+            
             &:hover
                 background: $main-color
                 color: #fff
@@ -177,7 +178,12 @@ section
     padding-bottom: 1.2rem
     transition: all .2s ease-in-out
     text-shadow: 0px 0px 50px rgba(0, 0, 0, .2)
-
+#hamburger-btn-nav
+    position: absolute;
+    right: 0;
+    z-index: 9999999999;
+    right: 10px;
+    top: 9px;
 // NAV
 .top-navigation
     display: flex
@@ -199,7 +205,7 @@ section
     .top-navigation_container 
         list-style: none
         display: flex
-        
+        .top-navogation_item
         .top-navogation_item:not(:last-child)
             margin-right: 5rem
             position: relative
@@ -212,8 +218,58 @@ section
             color: $main-color
             font-weight: 600 
             font-size: $font-l
+            .icon-dropdown 
+                font-size: 2rem !important
+                margin-left: 1rem
 // END NAV
+.hamburger-menu
+    position: fixed
+    height: 100vh
+    width: 80vw
+    background-image: linear-gradient(45deg, $main-color-dark-3, $main-color-light-3 )
+    right: -85vw
+    top: 0
+    z-index: 9
+    transition: all 200ms ease
+    &_open
+        right: 0 !important
 
+    .hamburger-menu_logo
+        font-size: 2.5rem
+        color: $white
+        padding: 2.5rem
+        text-decoration: none
+        text-transform: uppercase
+        font-weight: bold
+        letter-spacing: 1px
+        font-family: Titillium Web
+        display: block
+        margin: 0 auto
+        text-align: center
+    ul
+        list-style: none
+        .hamburger-menu_about-menu
+            background: $main-color-light-3
+            height: 0 
+            overflow: hidden
+            transition: all 200ms ease 
+        .hamburger-menu_about-menu_open
+            height: 100%
+
+        li
+            text-align: center
+            font-size: 3rem
+            color: $white
+            margin-bottom: 1.5rem
+
+            a
+                padding: 1.5rem 0
+                display: block
+                color: $white
+                text-decoration: none
+                &:hover
+                    background: $main-color-light-3
+                    
 // HEADER 
 .header-section
     color: $white
@@ -830,12 +886,14 @@ section
                 background-color: $main-color
             &-open .menu-bar
                 &
-                    background-color: #fff
+                    background-color: transparent
                 &::before 
                     top: 0
                     transform: rotate(45deg)
+                    background-color: #fff
                 &::after
                     top: 0
+                    background-color: #fff
                     transform: rotate(-45deg)
             &-open .menu-close
                 &
@@ -854,7 +912,27 @@ section
         padding: 3rem 5rem !important
     .section-testimoials .testimonial_item:not(:last-child)
         margin-right: 2rem
+        
+    .section-team .team-mem_container
+        grid-template-columns: 1fr !important
+    .blog-item
+        height: 50rem
+        flex-direction: column
+        .blog-item_thumbnail
+            width: 100%
+        .blog-item_content
+            padding: 3rem
 
+    .joinus .contact
+        width: 80%
+    .joinus-button
+        width: 80%;
+    .joinus-form_container-row
+        flex-direction: column
+        margin: 0 !important
+        .input_container
+            margin: 0 !important
+            margin-bottom: 1rem !important
 
 .input
     padding: 1rem 1.3rem
