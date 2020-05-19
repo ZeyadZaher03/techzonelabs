@@ -1,6 +1,56 @@
+if (!!document.querySelector(".joinus-form_form")) {
+	const form = document.querySelector(".joinus-form_form");
+	const inputs = document.querySelectorAll(
+		"input[type=text], input[type=email],  input[type=number]"
+	);
+
+	form.addEventListener("change", (e) => {
+		inputs.forEach((input) => {
+			if (input.value !== "") {
+				input.parentNode
+					.querySelector(".input_name")
+					.classList.add("input_name-active");
+				input.classList.add("input_active");
+			} else {
+				input.parentNode
+					.querySelector(".input_name")
+					.classList.remove("input_name-active");
+				input.classList.remove("input_active");
+			}
+		});
+	});
+}
+
 new WOW().init();
 var isMobile = false; //initiate as false
 // device detection
+
+const aboutBtn = document.querySelector("#dropdown-about-btn");
+const about = document.querySelector("#dropdown-about");
+const menuBtn = document.querySelector(".menu");
+let isAboutVis = false;
+aboutBtn.addEventListener("click", (e) => {
+	if (isAboutVis) {
+		about.style.display = "none";
+		return (isAboutVis = false);
+	} else {
+		about.style.display = "flex";
+		return (isAboutVis = true);
+	}
+});
+
+let isMenuVis = false;
+menuBtn.addEventListener("click", (e) => {
+	if (isMenuVis) {
+		menuBtn.classList.add("menu-bar-close");
+		menuBtn.classList.remove("menu-bar-open");
+		return (isMenuVis = false);
+	} else {
+		menuBtn.classList.add("menu-bar-open");
+		return (isMenuVis = true);
+	}
+});
+
 if (
 	/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(
 		navigator.userAgent
@@ -35,28 +85,3 @@ if (isMobile) {
 		},
 	});
 }
-const aboutBtn = document.querySelector("#dropdown-about-btn");
-const about = document.querySelector("#dropdown-about");
-const menuBtn = document.querySelector(".menu");
-let isAboutVis = false;
-aboutBtn.addEventListener("click", (e) => {
-	if (isAboutVis) {
-		about.style.display = "none";
-		return (isAboutVis = false);
-	} else {
-		about.style.display = "flex";
-		return (isAboutVis = true);
-	}
-});
-
-let isMenuVis = false;
-menuBtn.addEventListener("click", (e) => {
-	if (isMenuVis) {
-		menuBtn.classList.add("menu-bar-close");
-		menuBtn.classList.remove("menu-bar-open");
-		return (isMenuVis = false);
-	} else {
-		menuBtn.classList.add("menu-bar-open");
-		return (isMenuVis = true);
-	}
-});

@@ -11,6 +11,10 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/WOW-master/css/libs/animate.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<script
 			defer
@@ -22,9 +26,8 @@
 			defer
 			src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"
 		></script>
-		<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
 		<!-- AIzaSyDWweLTl5rXcXwyb_DhB2cByhgyspmrT8Q -->
-		<title>Techzonelabs - clients</title>
+		<title>Techzonelabs -join us</title>
 	</head>
 
 	<body>
@@ -66,124 +69,98 @@
 			>
 				CONTACT US
 			</a>
-			<button class="menu button button-main button-rounded">**</button>
+			<button class="menu button button-main button-rounded">
+				<div class="menu-bar"></div>
+			</button>
 		</nav>
 
-		<section id="joinus" class="section-team">
-			<h2 class="section-header">WE're happy to work with</h2>
-			<div class="portofolio">
-				<div class="project-container">
-					<div class="project">
-						<img
-							src="./assets/images/profolio/g1.jpg"
-							alt="techzone"
-						/>
-						<p>Aziz App</p>
-						<span
-							>Lorem ipsum dolor sit, amet consectetur adipisicing
-							elit. Enim obcaecati accusamus
-						</span>
-						<button>VISIT</button>
-					</div>
-					<div class="project">
-						<img
-							src="./assets/images/profolio/g2.jpg"
-							alt="techzone"
-						/>
-						<p>Matego</p>
-						<span
-							>Lorem ipsum dolor sit, amet consectetur adipisicing
-							elit. Enim obcaecati accusamus
-						</span>
-						<button>VISIT</button>
-					</div>
-					<div class="project">
-						<img
-							src="./assets/images/profolio/g3.jpg"
-							alt="techzone"
-						/>
-						<p>maysure</p>
-						<span
-							>Lorem ipsum dolor sit, amet consectetur adipisicing
-							elit. Enim obcaecati accusamus
-						</span>
-						<button>VISIT</button>
-					</div>
-					<div class="project">
-						<img
-							src="./assets/images/profolio/g4.jpg"
-							alt="techzone"
-						/>
-						<p>Lunch box</p>
-						<span
-							>Lorem ipsum dolor sit, amet consectetur adipisicing
-							elit. Enim obcaecati accusamus
-						</span>
-						<button>VISIT</button>
-					</div>
-					<div class="project">
-						<img
-							src="./assets/images/profolio/g5.jpg"
-							alt="techzone"
-						/>
-						<p>Al-Ahmed Realstate</p>
-						<span
-							>Lorem ipsum dolor sit, amet consectetur adipisicing
-							elit. Enim obcaecati accusamus
-						</span>
-						<button>VISIT</button>
-					</div>
-					<div class="project">
-						<img
-							src="./assets/images/profolio/g6.jpg"
-							alt="techzone"
-						/>
-						<p>Tech Cube</p>
-						<span
-							>Lorem ipsum dolor sit, amet consectetur adipisicing
-							elit. Enim obcaecati accusamus
-						</span>
-						<button>VISIT</button>
-					</div>
+		<section class="joinus-section">
+			<h2 class="section-header">BE A PART OF Techzonelabs</h2>
+			<div class="joinus-section_content">
+				<div class="joinus-section_par">
+					<h2>hello world jool fool</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					Quisquam nulla natus repellat eaque saepe nisi a ab atque
+					error ad quibusdam fuga cum, autem officia quos ea tempore
+					consectetur repudiandae? <br /><br />
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					Praesentium libero molestiae ipsam. Sequi accusamus dolorum
+					ab quos incidunt illum iure, ipsa corrupti, dolore assumenda
+					amet aspernatur quae cum unde consequuntur!
+				</div>
+				<div class="joinus-section_img">
+					<img src="./assets/images/innovation_.png" alt="inv" />
 				</div>
 			</div>
 		</section>
+		<section class="joinus-form">
+			<div class="joinus-form_container">
+				<h2 class="section-header">Contact Us</h2>
 
-		<section class="joinus odd-section">
-			<div class="section-header">BRING YOUR BUSNISSE TO LIVE</div>
-			<div class="contact">
-				<div class="contact_form">
-					<form action="">
+				<form class="joinus-form_form" action="">
+					<div class="joinus-form_container-row">
+						<div class="input_container">
+							<input
+								class="input input-half"
+								type="text"
+								name="name"
+								placeholder="name"
+								id=""
+							/>
+							<div class="input_name">Name</div>
+							<div class="input_error">Something went wronge</div>
+						</div>
+						<div class="input_container">
+							<input
+								class="input input-half"
+								type="text"
+								name=""
+								placeholder="Specialist at"
+								id=""
+							/>
+							<div class="input_name">Specialist at</div>
+							<div class="input_error">Something went wronge</div>
+						</div>
+					</div>
+					<div class="joinus-form_container-row">
+						<div class="input_container">
+							<input
+								class="input input-half"
+								type="number"
+								name=""
+								placeholder="Number of experience years"
+								id=""
+							/>
+							<div class="input_name">
+								Number of experience years
+							</div>
+							<div class="input_error">Something went wronge</div>
+						</div>
+
+						<div class="input_container">
+							<input
+								class="input input-half"
+								type="email"
+								name=""
+								placeholder="Email"
+								id=""
+							/>
+							<div class="input_name">Email</div>
+							<div class="input_error">Something went wronge</div>
+						</div>
+					</div>
+					<div class="joinus-form_container-row">
+						<p class="cv-mess">Please add your CV</p>
 						<input
-							type="text"
-							placeholder="email"
-							name="email"
-							id="email"
+							class="input input-half input-file"
+							type="file"
+							name=""
+							id=""
 						/>
-						<input
-							type="text"
-							placeholder="name"
-							name="name"
-							id="name"
-						/>
-						<input
-							type="text"
-							placeholder="your phone number"
-							name="phone"
-							id="phone"
-						/>
-						<textarea
-							name="messahe"
-							id="message"
-							cols="30"
-							rows="10"
-							placeholder="write your message here"
-						></textarea>
-					</form>
-				</div>
+					</div>
+					<input class="button-styled" type="submit" value="Submit" />
+				</form>
 			</div>
-
-			<button class="button joinus-button">CONTACT US</button>
 		</section>
 
 		<footer class="footer-section">
@@ -231,5 +208,7 @@
 				</div>
 			</div>
 		</footer>
+		<script src="./assets/vendor/WOW-master/dist/wow.js"></script>
+		<script defer src="./assets/js/app.js"></script>
 	</body>
 </html>

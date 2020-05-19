@@ -11,6 +11,10 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/WOW-master/css/libs/animate.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<script
 			defer
@@ -22,11 +26,9 @@
 			defer
 			src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"
 		></script>
-		<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
 		<!-- AIzaSyDWweLTl5rXcXwyb_DhB2cByhgyspmrT8Q -->
-		<title>Techzonelabs - clients</title>
+		<title>Techzonelabs -Our team</title>
 	</head>
-
 	<body>
 		<nav class="top-navigation">
 			<a href="index.html" class="logo">
@@ -66,18 +68,35 @@
 			>
 				CONTACT US
 			</a>
-			<button class="menu button button-main button-rounded">**</button>
+			<button class="menu button button-main button-rounded">
+				<div class="menu-bar"></div>
+			</button>
 		</nav>
 
+		<header class="header-section-ourteam">
+			<div class="ourteam-header_container">
+				<div class="ourteam-header_heading">WHO ARE WE</div>
+				<div class="ourteam-header_par">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+					Hic unde, quibusdam veniam quod quae ex eveniet? Doloremque
+					autem animi voluptas minus non, vitae fuga numquam possimus
+					aut iste ducimus saepe. Lorem ipsum dolor, sit amet
+					consectetur adipisicing elit. Quos obcaecati temporibus
+					sequi iste alias, optio nobis cum assumenda omnis ducimus
+					esse
+				</div>
+			</div>
+		</header>
+
 		<section class="section-team">
-			<h2 class="section-header">WE're happy to work with</h2>
+			<h2 class="section-header">More than just a team</h2>
 
 			<div class="team-mem_container">
 				<div class="team-mem">
 					<div class="team-mem_front">
 						<div class="team-mem_image">
 							<img
-								src="./assets/images/profolio/g1.jpg"
+								src="./assets/images/WhatsApp Image 2019-06-24 at 12.58.47 AM.jpeg"
 								alt="zeyad"
 							/>
 						</div>
@@ -248,39 +267,9 @@
 				</div>
 			</div>
 		</section>
-
 		<section class="joinus odd-section">
-			<div class="section-header">BRING YOUR BUSNISSE TO LIVE</div>
-			<div class="contact_form">
-				<form action="">
-					<input
-						type="text"
-						placeholder="email"
-						name="email"
-						id="email"
-					/>
-					<input
-						type="text"
-						placeholder="name"
-						name="name"
-						id="name"
-					/>
-					<input
-						type="text"
-						placeholder="your phone number"
-						name="phone"
-						id="phone"
-					/>
-					<textarea
-						name="messahe"
-						id="message"
-						cols="30"
-						rows="10"
-						placeholder="write your message here"
-					></textarea>
-				</form>
-			</div>
-			<button class="button joinus-button">CONTACT US</button>
+			<div class="section-header">WANT TO JOIN US</div>
+			<button class="button joinus-button">JOIN US</button>
 		</section>
 
 		<footer class="footer-section">
@@ -328,5 +317,7 @@
 				</div>
 			</div>
 		</footer>
+		<script src="./assets/vendor/WOW-master/dist/wow.js"></script>
+		<script defer src="./assets/js/app.js"></script>
 	</body>
 </html>

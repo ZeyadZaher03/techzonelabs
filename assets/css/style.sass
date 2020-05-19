@@ -114,7 +114,10 @@ $windowSize: 20rem
                 color: #fff
 section
     padding: 8rem 10rem 10rem 10rem
-
+.cv-mess
+    font-size: 2rem
+    color: $main-color
+    flex: 1
 .section-header
     font-family: Titillium Web
     font-size: $font-xxl
@@ -125,7 +128,11 @@ section
     margin: 0 auto
     margin-bottom: 7rem
     transition: all 150ms ease-in-out
-
+.input-file
+    border: 0 !important
+    padding: 0 !important
+    margin-top: 1.5rem !important
+    flex: 1 !important
 .button
     text-decoration: none
     cursor: pointer
@@ -151,7 +158,18 @@ section
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)
             backface-visibility: none
             transform: scale(1.05)
-
+.button-styled
+    text-align: center
+    margin: 0 auto
+    display: block
+    margin-top: 4rem
+    padding: .7rem 2rem
+    border : 0
+    border-radius: 5rem
+    color: $white
+    font-weight: 600
+    cursor: pointer
+    background-image: linear-gradient(45deg , $main-color-dark-3 , $main-color-light-3)
 .hero-heading
     font-size: $font-xxxl
     font-family: Titillium Web
@@ -414,9 +432,9 @@ section
         padding: 2rem 3rem
         border-radius: .3rem
         transition: all 200ms ease
-        box-shadow: 0px 0px 5px 0px rgba( 0, 0, 0, 0.1)
+        box-shadow: 0px 0px 7px 0px rgba( 0, 0, 0, 0.2)
         &:hover
-            box-shadow: 0px 0px 15px 1px rgba( 0, 0, 0, 0.15)
+            box-shadow: 0px 0px 15px 1px rgba( 0, 0, 0, 0.25)
             transform: scale(1.1) translateY(-.2rem)
         img
             width: 100%
@@ -472,7 +490,104 @@ section
                 img 
                     width: 20rem
 
+.blog
+    margin-top: 5rem
+    &-item
+        background-color: #fff
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.15) 
+        transition: all 200ms ease
+        cursor: pointer
+        text-decoration: none
+        width: 100%
+        height: 22rem
+        border-radius: 3px
+        overflow: hidden
+        display: flex
+        &:not(:last-child)
+            margin-bottom: 7rem
+        &:hover
+            transform: scale(1.01)
+            box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.15) 
 
+        &_thumbnail
+            width: 30%
+            height: 100%
+            overflow: hidden
+            position: relative
+            margin-right: 5rem
+            @include centerFlex() 
+        &_img
+            width: 125%
+        &_img-container
+            position: absolute;
+            width: 100%;
+            background-image: linear-gradient(-45deg, #27004169, #7011b05e);
+            height: 100%;
+        &_content
+            display: flex
+            color: $black
+            flex-direction: column
+            justify-content: center;
+        &_header
+            font-size: 3rem
+            margin-bottom: 1rem
+        &_info
+            display: flex
+            font-size: 1.2rem
+            margin-bottom: 1rem
+        &_date
+            margin-right: 1rem
+        &_autor
+        &_par
+            font-size: 2rem
+            
+.joinus-section
+    margin-top: 5rem
+    padding-bottom: 0 !important
+
+
+    &_content
+        display: flex
+        height: 30rem
+        justify-content: space-between
+    &_par
+        flex: 2
+        margin-top: 2rem
+        font-size: 1.8rem
+        margin-right: 6rem
+        display: flex
+        flex-direction: column
+        // justify-content: center
+        h2
+            margin-bottom: 2rem
+            text-transform: uppercase
+            font-size: 3rem
+    &_img
+        flex: 1
+        display: flex
+        padding: 2rem
+        justify-content: flex-end
+        img
+            height: 100%
+
+.joinus-form
+    width: 80%
+    margin: 0 auto
+    &_container
+        &-row
+            display: flex
+            justify-content: space-between
+            &:not(:last-child)
+                margin-bottom: 2rem
+            .input_container
+                flex: 1
+                &:not(:last-child)
+                    margin-right: 5rem
+                &-half
+
+    .button-styled
+        padding: 1rem 2rem 
+        font-size: 2rem
 // teams
 .header-section-ourteam
 .ourteam-header
@@ -739,3 +854,43 @@ section
         padding: 3rem 5rem !important
     .section-testimoials .testimonial_item:not(:last-child)
         margin-right: 2rem
+
+
+.input
+    padding: 1rem 1.3rem
+    font-size: 1.6rem
+    border: 1px solid #ccc
+    width: 100%
+    border-radius: 3px
+    transition: all 200ms ease
+    &_container
+        position: relative
+        transition: all 200ms ease
+    &_name
+        transition: all 200ms ease
+        position: absolute
+        left: 1rem
+        top: 13px
+        display: inline-block
+        padding: 0 5px
+        height: 10px
+        background: #ffffff
+        color: $main-color
+        visibility: hidden
+        font-size: 1.4rem
+    &_error
+        visibility: hidden
+    &_name-active
+        top: -8px
+        visibility: visible
+    &::placeholder
+        font-size: 1.6rem
+        text-transform: capitalize
+        color: #5e5e5e 
+    &:focus
+        outline: none
+        border: 1px solid $main-color
+        box-shadow: 0 0 5px rgba($main-color,.5 )
+    &_active
+        border: 1px solid $main-color
+        box-shadow: 0 0 5px rgba($main-color,.3 )
