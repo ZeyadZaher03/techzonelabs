@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<?php include "./includes/head.php"?>
-		<title>not</title>
+		<title>techzonelasb</title>
 	</head>
 	<body>
 		<?php include "./includes/navigation.php"?>
