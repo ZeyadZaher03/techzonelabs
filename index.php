@@ -12,7 +12,7 @@
 				<h1 class="hero-heading">BRING YOU BUSSNIESS TO LIVE</h1>
 				<p class="heading-par">
 					Aiming to be your Tech-Arm and success partner, writing
-					memorable stories along the journey
+					memorable stories along the journey.
 				</p>
 				<a class="button button-main button-hero" href="#">Start Now</a>
 			</div>
